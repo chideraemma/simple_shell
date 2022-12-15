@@ -1,19 +1,20 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <signal.h>
+#include "main.h"
 
 #define BUFFER_SIZE 1024
+
+/**
+ * main - A simple shell
+ * @argc: main argument
+ * @argv: second main argument
+ * @envp: third main argument
+ * Return: EXIT_SUCCESS if success or EXIT_FAILURE if failed
+ */
 
 int main(int argc, char *argv[], char *envp[])
 {
 	char buffer[BUFFER_SIZE];
 	pid_t pid;
 	(void)argc;
-	(void)argv;
 	while (1)
 	{
 		/*Display prompt and wait for user input*/
