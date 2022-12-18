@@ -12,4 +12,10 @@
 #include <stdio.h>
 #include <string.h>
 
+extern char **environ;
+int prompt(void);
+char *_read(void);
+char *_fullpathbuffer(char **av, char *PATH, char *copy);
+int checkbuiltins(char **av, char *buffer, int exitstatus);
+int _forkprocess(char **av, char *buffer, char *fullpathbuffer);
 #endif /* SHELL_H */
